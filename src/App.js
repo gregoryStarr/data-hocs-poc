@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {withShowsAndSpinner} from "./Data/withShows";
-import {List, ListItem} from '@ustudio/bitbox'
+import {List, ListItem, Card} from '@ustudio/bitbox'
 
 /*
 *
@@ -16,7 +16,7 @@ const Shows = withShowsAndSpinner((data) => {
       {
         Object.keys(data).map((item) => {
           const {title, body} = data[item];
-          return <ListItem key={Math.random()}><h3>{title}</h3> - {body}</ListItem>
+          return <ListItem key={Math.random()}><Card><h3>{title}</h3> - {body}</Card></ListItem>
         })
       }
     </List>
@@ -31,7 +31,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Data Hocs POC</h1>
         </header>
-        <Shows />
+        <div className="list-container">
+          <Shows />
+        </div>
       </div>
     );
   }

@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.App .list-container{
+  background:lightslategrey;
+  padding:20px;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -20,6 +25,10 @@
 
 .App-intro {
   font-size: large;
+}
+
+li div{
+  background:white;
 }
 
 @keyframes App-logo-spin {
