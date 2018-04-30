@@ -12,7 +12,7 @@ import {List, ListItem} from '@ustudio/bitbox'
 *
 * */
 const Shows = withShowsAndSpinner((data) => {
-  return <List>
+  return <List divider>
       {
         Object.keys(data).map((item) => {
           const {title, body} = data[item];
